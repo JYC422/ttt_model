@@ -64,5 +64,14 @@ var gameWon = function() {
 /* RENDER OUR VIEW */
 
 var render = function() {
+  var turnEl = document.getElementById("turn")
+  turnEl.textContent = "Turn: " + currentPlayer;
+
+  var winnerEl = document.getElementById("winner")
+  if (!won) {
+    winnerEl.textContent = "Winner: ?"
+  } else {
+    winnerEl.textContent = "Winner " + currentPlayer;
+  };
 
 };
