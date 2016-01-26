@@ -11,6 +11,21 @@ var board = [
 ];
 
 // START THE GAME
+//    inputs:
+//      current player, board, won
+//    outputs:
+//      board is empty
+
+var startGame = function() {
+  won = false;
+  currentPlayer = "X";
+  board = [
+  "", "", "",
+  "", "", "",
+  "", "", "",
+  ];
+};
+
 // PLAYER MOVE (CHANGES TURN)
 //    inputs:
 //      whose turn it is
@@ -34,4 +49,20 @@ var move = function(cellIndex) {
   }
 };
 // WIN THE GAME
-var gameWon = function() {};
+//    inputs:
+//      board
+//    outcomes:
+//      true or false
+var gameWon = function() {
+  return (
+    (board[0] === board[1]) && (board[0] === board[2]) && (board[0] !== '') ||
+    (board[3] === board[4]) && (board[3] === board[5]) && (board[3] !== '') ||
+    (board[6] === board[7]) && (board[6] === board[8]) && (board[6] !== '')
+    )
+};
+
+/* RENDER OUR VIEW */
+
+var render = function() {
+
+};

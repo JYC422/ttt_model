@@ -4,9 +4,60 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>TTT Model</title>
-  <link rel="stylesheet" href="">
+  <style>
+    body {
+      width: 600px;
+      margin: 0 auto;
+    }
+    .align-right {
+      float: right;
+      right: 0;
+      height: 100px;
+      width: 100px;
+      border: 1px solid black;
+    }
+    .board {
+      width: 400px;
+      height: 400px;
+      border: 1px solid black;
+      margin: 0 auto;
+    }
+    button {
+      clear: both;
+    }
+    div {
+      display: inline-block;
+    }
+
+    td {
+      width: 125px;
+      height: 125px;
+      border: 1px solid black;
+    }
+  </style>
 </head>
 <body>
+  <h1>Tic Tac Toe</h1>
+
+  <div class="board">
+    <table>
+      <tbody>
+        <tr><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="align-right">
+    <span>Turn: X</span>
+  </div>
+
+  <div class="align-right">
+    <span>Winner: ?</span>
+  </div>
+
+  <button>RESTART</button>
 
   <script src="main.js"></script>
 </body>
