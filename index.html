@@ -39,11 +39,11 @@
   <h1>Tic Tac Toe</h1>
 
   <div class="board">
-    <table>
+    <table id="board">
       <tbody>
-        <tr><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td></tr>
+        <tr><td id="cell0"></td><td id="cell1"></td><td id="cell2"></td></tr>
+        <tr><td id="cell3"></td><td id="cell4"></td><td id="cell5"></td></tr>
+        <tr><td id="cell6"></td><td id="cell7"></td><td id="cell8"></td></tr>
       </tbody>
     </table>
   </div>
@@ -56,7 +56,7 @@
     <span id="winner">Winner: ?</span>
   </div>
 
-  <button>RESTART</button>
+  <button id="restart">RESTART</button>
 
   <script src="main.js"></script>
 </body>

@@ -74,4 +74,33 @@ var render = function() {
     winnerEl.textContent = "Winner " + currentPlayer;
   };
 
+// var cellEl = document.getElementById("cell0");
+// cell0El.textContent = board[0];
+
+  document.getElementById("cell0").textContent = board[0];
+  document.getElementById("cell1").textContent = board[1];
+  document.getElementById("cell2").textContent = board[2];
+  document.getElementById("cell3").textContent = board[3];
+  document.getElementById("cell4").textContent = board[4];
+  document.getElementById("cell5").textContent = board[5];
+  document.getElementById("cell6").textContent = board[6];
+  document.getElementById("cell7").textContent = board[7];
+  document.getElementById("cell8").textContent = board[8];
 };
+
+
+/* USER INTERACTION */
+
+document.getElementById("restart")
+        .addEventListener("click", function(event) {
+          startGame();
+          render();
+        });
+
+document.getElementById("board")
+        .addEventListener("click", function(event) {
+            var cellEl = event.target;
+            var cellIndex = cellEl.id.slice(-1); //id.substring()
+            move(cellIndex);
+            render();
+});
